@@ -51,7 +51,9 @@ const Demo = () => {
 			<div className="container text-center border border-dark ">
 				<div className="row border border-dark">
 					<div className="col-md-4 border border-dark">
-						<img src={rigoImage} className="border border-radius-2" alt="..."/>
+						<img src={`https://starwars-visualguide.com/assets/img/vehicles/${item.uid}.jpg`}
+					className="card-img-top"
+					alt="..."/>
 					</div>
 					<div className="col-md-8 border border-dark">
 						<h1>Character name</h1>

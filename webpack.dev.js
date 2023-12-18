@@ -28,9 +28,9 @@ module.exports = merge(common, {
         static: {
           directory: path.resolve(__dirname, "dist"),
         },
-        client: {
-          webSocketURL: publicUrl
-        },
+    //     client: {
+    //       webSocketURL: publicUrl
+    //     },
     },
     plugins: []
 });
