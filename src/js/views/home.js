@@ -13,21 +13,21 @@ const Home = () => {
 		<div className="container-fluid p-3 ms-3">
 			<h2>Characters</h2>
 				<div className = "mt-4 d-flex flex-wrap gap-5 overflow-y-auto ">
-					<Card cathegory="people" data={store.people}/>				
+					<Card category="people" data={store.people}/>				
 				</div>
 		</div>	
 					
 		<div className="container-fluid p-3 ms-3 my-5">
 			<h2>Planets</h2>	
 				<div className = "mt-4 d-flex flex-wrap gap-5 overflow-y-auto">
-					<Card cathegory="planets" data={store.planets}/>			
+					<Card category="planets" data={store.planets}/>			
 				</div>
 		</div>
 
 		<div className="container-fluid p-3 ms-3 my-5">
 			<h2>Vehicles</h2>	
 				<div className = "mt-4 d-flex flex-wrap gap-5 overflow-y-auto">			
-					<Card cathegory="vehicles" data={store.vehicles}/>				
+					<Card category="vehicles" data={store.vehicles}/>				
 				</div>
 		</div>
 
