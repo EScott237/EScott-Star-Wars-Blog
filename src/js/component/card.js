@@ -2,12 +2,13 @@ import React, { useContext } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import failImage from "../../img/failImage.jpg";
 
-const Card = ({ data, category }) => {
+const Card = ({ item, category, index }) => {
   const { store, actions } = useContext(Context);
 
 
-  return data?.map((item, index) => {
+  
 		let imageBaseUrl;
 
 	switch (category) {
@@ -26,16 +27,18 @@ const Card = ({ data, category }) => {
 		}
 
 		const imgLink = `${imageBaseUrl}${parseInt(index) + 1}.jpg`;
-		const fallbackImgLink = "https://www.horizonplant.com/wp-content/uploads/2017/05/placeholder-400x400.png"; // Replace with your actual fallback image URL
+		const fallbackImgLink = "https://qph.cf2.quoracdn.net/main-qimg-25822c155f1c07ce501bd75443059e06-lq"; // Replace with your actual fallback image URL
 	
 		const handleImageError = (event) => {
 		event.target.src = fallbackImgLink;
 		};
+    
+    // const handleFavorite = (event) =>{
+    //   {store.favorites}
+    //   console.log()
+    // }
 	return(
-		
-	)
-
-    <div key={index} className="card">
+	 <div className="card">
       {category === "people" && (
         <>
 		  <img
@@ -68,7 +71,7 @@ const Card = ({ data, category }) => {
                 Learn more!
               </button>
             </Link>
-            <button className="btn btn-light ms-5">
+            <button onclick={handleFavorite} className="btn btn-light ms-5">
               {" "}
               <i className="fa-regular fa-heart" style={{ color: "#ff0f0f" }} />
             </button>
@@ -78,11 +81,9 @@ const Card = ({ data, category }) => {
       {category === "planets" && (
         <>
           <img
-            src={`https://starwars-visualguide.com/assets/img/planets/${
-              index + 1
-            }.jpg`}
-            className="card-img-top"
-            alt="..."
+            src={imgLink}
+			className="card-img-top"
+            onError={handleImageError}
           />
           <div className="card-body container-md">
             <h5 className="card-title">
@@ -99,7 +100,7 @@ const Card = ({ data, category }) => {
                   item.population.slice(1)}
               </p>
             </div>
-            <Link to={`/single/${index + 1}`}>
+            <Link to={`/single/${category}/${index}`}>
               <button className="btn btn-outline-primary pe-4">
                 Learn more!
               </button>
@@ -114,11 +115,9 @@ const Card = ({ data, category }) => {
       {category === "vehicles" && (
         <>
           <img
-            src={`https://starwars-visualguide.com/assets/img/vehicles/${
-              index + 1
-            }.jpg`}
-            className="card-img-top"
-            alt="..."
+            src={imgLink}
+			className="card-img-top"
+            onError={handleImageError}
           />
           <div className="card-body container-md">
             <h5 className="card-title">
@@ -137,7 +136,7 @@ const Card = ({ data, category }) => {
                   item.passengers.slice(1)}
               </p>
             </div>
-            <Link to={`/single/${index + 1}`}>
+            <Link to={`/single/${category}/${index}`}>
               <button className="btn btn-outline-primary pe-4">
                 Learn more!
               </button>
@@ -150,7 +149,8 @@ const Card = ({ data, category }) => {
         </>
       )}
     </div>
-  ));
+  )
 };
 
 export default Card;
+

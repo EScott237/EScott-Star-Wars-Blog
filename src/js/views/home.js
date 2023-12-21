@@ -13,21 +13,28 @@ const Home = () => {
 		<div className="container-fluid p-3 ms-3">
 			<h2>Characters</h2>
 				<div className = "mt-4 d-flex flex-wrap gap-5 overflow-y-auto ">
-					<Card category="people" data={store.people}/>				
+					{store.people.map((item, index) => {
+						return(<Card key={index} category="people" item={item} index ={index}/>		)
+					})}
+							
 				</div>
 		</div>	
 					
 		<div className="container-fluid p-3 ms-3 my-5">
 			<h2>Planets</h2>	
 				<div className = "mt-4 d-flex flex-wrap gap-5 overflow-y-auto">
-					<Card category="planets" data={store.planets}/>			
+				{store.planets.map((item, index) => {
+						return(<Card key={index} category="planets" item={item} index ={index}/>		)
+					})}		
 				</div>
 		</div>
 
 		<div className="container-fluid p-3 ms-3 my-5">
 			<h2>Vehicles</h2>	
 				<div className = "mt-4 d-flex flex-wrap gap-5 overflow-y-auto">			
-					<Card category="vehicles" data={store.vehicles}/>				
+				{store.vehicles.map((item, index) => {
+						return(<Card key={index} category="vehicles" item={item} index ={index}/>		)
+					})}				
 				</div>
 		</div>
 
