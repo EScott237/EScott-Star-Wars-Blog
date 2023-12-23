@@ -66,14 +66,15 @@ export const Single = (props) => {
             </div>
           </div>
         </div>
-        <div className="container text-center">
+        <div className="container-md">
           <div className="row row-cols-auto text-center border border-dark">
-            <p className="col p-4 m-4-dark">Name:{character.name.charAt(0).toUpperCase() + character.name.slice(1)}</p>
-            <p className="col p-4 m-4-dark">Birth year:{character.birth_year}</p>
-            <p className="col p-4 m-4-dark">Gender: {character.gender.charAt(0).toUpperCase() + character.gender.slice(1)}</p>
-            <p className="col p-4 m-4-dark">Height: {character.height}</p>
-            <p className="col p-4 m-4-dark">Eye color:{character.eye_color.charAt(0).toUpperCase()+character.eye_color.slice(1)} </p>
-            <p className="col p-4 m-4-dark">Mass: {character.mass}</p>			
+            <p className="col p-4 m-4-dark">Name:{" "}{character.name.charAt(0).toUpperCase() + character.name.slice(1)}</p>
+            <p className="col p-4 m-4-dark">Birth year:{" "}{character.birth_year}</p>
+            <p className="col p-4 m-4-dark">Gender: {" "}{character.gender.charAt(0).toUpperCase() + character.gender.slice(1)}</p>
+            <p className="col p-4 m-4-dark">Height: {" "}{character.height}</p>
+            <p className="col p-4 m-4-dark">Eye color:{" "}{character.eye_color.charAt(0).toUpperCase()+character.eye_color.slice(1)} </p>
+            <p className="col p-4 m-4-dark">Mass: {" "}{character.mass}</p>			
+            <p className="col p-4 m-4-dark">Skin color:{" "}{character.skin_color.charAt(0).toUpperCase()+character.skin_color.slice(1)} </p>
           </div>
         </div>
       </div>
@@ -96,7 +97,7 @@ export const Single = (props) => {
             <div className="col-md-4 border border-dark">
             <img
             src={imgLink}
-			className="card-img-top"
+			      className="card-img-top"
             onError={handleImageError}
           />
             </div>
@@ -119,11 +120,11 @@ export const Single = (props) => {
         </div>
         <div className="container text-center">
           <div className="row row-cols-auto text-center border border-dark">
-            <p className="col p-4 m-4-dark">Name:{character.name.charAt(0).toUpperCase() + character.name.slice(1)}</p>
-            <p className="col p-4 m-4-dark">Diameter:{character.diameter}</p>
-            <p className="col p-4 m-4-dark">climate: {character.climate.charAt(0).toUpperCase() + character.climate.slice(1)}</p>
-            <p className="col p-4 m-4-dark">Population: {character.population}</p>
-            <p className="col p-4 m-4-dark">Terrain:{character.terrain.charAt(0).toUpperCase()+character.terrain.slice(1)} </p>		
+            <p className="col p-4 m-4-dark">Name:{" "}{character.name.charAt(0).toUpperCase() + character.name.slice(1)}</p>
+            <p className="col p-4 m-4-dark">Diameter:{" "}{character.diameter}</p>
+            <p className="col p-4 m-4-dark">climate:{" "} {character.climate.charAt(0).toUpperCase() + character.climate.slice(1)}</p>
+            <p className="col p-4 m-4-dark">Population:{" "} {character.population}</p>
+            <p className="col p-4 m-4-dark">Terrain:{" "}{character.terrain.charAt(0).toUpperCase()+character.terrain.slice(1)} </p>		
           </div>
         </div>
       </div>
@@ -169,11 +170,11 @@ export const Single = (props) => {
         </div>
         <div className="container text-center">
           <div className="row row-cols-auto text-center border border-dark">
-            <p className="col p-4 m-4-dark">Name:{character.name.charAt(0).toUpperCase() + character.name.slice(1)}</p>
-            <p className="col p-4 m-4-dark">Max atmosphering speed:{character.max_atmosphering_speed}</p>
-            <p className="col p-4 m-4-dark">Model: {character.model.charAt(0).toUpperCase() + character.model.slice(1)}</p>
-            <p className="col p-4 m-4-dark">Passengers: {character.passengers}</p>
-            <p className="col p-4 m-4-dark">Vehicle class:{character.vehicle_class.charAt(0).toUpperCase()+character.vehicle_class.slice(1)} </p>		
+            <p className="col p-4 m-4-dark">Name:{" "}{character.name.charAt(0).toUpperCase() + character.name.slice(1)}</p>
+            <p className="col p-4 m-4-dark">Max atmosphering speed:{" "}{character.max_atmosphering_speed}</p>
+            <p className="col p-4 m-4-dark">Model:{" "} {character.model.charAt(0).toUpperCase() + character.model.slice(1)}</p>
+            <p className="col p-4 m-4-dark">Passengers:{" "} {character.passengers}</p>
+            <p className="col p-4 m-4-dark">Vehicle class:{" "}{character.vehicle_class.charAt(0).toUpperCase()+character.vehicle_class.slice(1)} </p>		
           </div>
         </div>
       </div>

@@ -33,22 +33,23 @@ const Card = ({ item, category, index }) => {
 		event.target.src = fallbackImgLink;
 		};
     
-    // const handleFavorite = (event) =>{
-    //   {store.favorites}
-    //   console.log()
-    // }
+    const handleFavorite = (event) =>{
+      console.log(store.favorites)
+      
+    } 
 	return(
 	 <div className="card">
       {category === "people" && (
         <>
 		  <img
             src={imgLink}
-			className="card-img-top"
+			      className="card-img-top img-fluid"
             onError={handleImageError}
+            style={{width: "400px",height:"400px"}}
           />
           <div className="card-body container-md">
             <h5 className="card-title">
-              Name: {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
+              Name: {" "}{item.name.charAt(0).toUpperCase() + item.name.slice(1)}
             </h5>
             <div className="card_text container-md">
               <p className="p-0 m-0">
@@ -65,13 +66,14 @@ const Card = ({ item, category, index }) => {
                 {item.eye_color.charAt(0).toUpperCase() +
                   item.eye_color.slice(1)}
               </p>
+            
             </div>
             <Link to={`/single/${category}/${index}`}>
               <button className="btn btn-outline-primary pe-4">
                 Learn more!
               </button>
             </Link>
-            <button onclick={handleFavorite} className="btn btn-light ms-5">
+            <button onClick={handleFavorite} className="btn btn-light ms-5">
               {" "}
               <i className="fa-regular fa-heart" style={{ color: "#ff0f0f" }} />
             </button>
@@ -82,12 +84,13 @@ const Card = ({ item, category, index }) => {
         <>
           <img
             src={imgLink}
-			className="card-img-top"
+			      className="card-img-top img-fluid"
             onError={handleImageError}
+            style={{width: "400px",height:"400px"}}
           />
           <div className="card-body container-md">
             <h5 className="card-title">
-              Name: {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
+              Name: {" "}{item.name.charAt(0).toUpperCase() + item.name.slice(1)}
             </h5>
             <div className="card_text container-md">
               <p className="p-0 m-0">
@@ -116,12 +119,13 @@ const Card = ({ item, category, index }) => {
         <>
           <img
             src={imgLink}
-			className="card-img-top"
+			      className="card-img-top img-fluid"
             onError={handleImageError}
+            style={{width: "400px",height:"400px"}}
           />
           <div className="card-body container-md">
             <h5 className="card-title">
-              Name:
+              Name:{" "}
               {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
             </h5>
             <div className="card_text container-md">
@@ -131,7 +135,7 @@ const Card = ({ item, category, index }) => {
                   item.vehicle_class.slice(1)}
               </p>
               <p className="p-0 m-0">
-                Passengers:
+                Passengers:{" "}
                 {item.passengers.charAt(0).toUpperCase() +
                   item.passengers.slice(1)}
               </p>
