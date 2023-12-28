@@ -1,23 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 	  store: {
-		demo: [
-		  {
-			title: "NULL",
-			background: "white",
-			initial: "white",
-		  },
-		  {
-			title: "PRIMERO",
-			background: "white",
-			initial: "white",
-		  },
-		  {
-			title: "SEGUNDO",
-			background: "white",
-			initial: "white",
-		  },
-		],
   
 		people: [],
 		vehicles: [],
